@@ -1321,25 +1321,42 @@
 <script type='text/javascript'>
 //<![CDATA[
 
-  // [1. ADVERTISING & READ ALSO CONFIGURATION]
-  const adsData = {
-    ad1: { active: true, img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEh1DCqRRPeoaLbargUYRZMNPprZsKrKHoXnLrC6lP0scjqhC4MSdbW9BBaWD9of4IbzyIB6vggED7wgbXEgzjUFqFj1pD_SKB2maTAowyXjhbBHqc7wQ8gH5BnwhUUnRs-a6NQ5CkisKyRm44jjmb7aWVemwPPE2MGBVeJjbgJuTwV_T0IX2-Y5QCOqws/s320/ChatGPT%20Image%20Mar%2021,%202026,%2005_46_33%20PM.png", link: "https://chat.whatsapp.com/ICzDnFo41dCHjbR6qGkrPG" },
-    ad2: { active: false, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
-    readAlso: { active: true }, 
-    ad3: { active: false, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
-    ad4: { active: true, img: "https://sudheer.xyz/img/logo-sk.webp", link: "https://sudheer.xyz" },
-    ad5: { active: true, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
-    ad6: { active: false, img: "https://via.placeholder.com/728x90?text=AD+SLOT+6", link: "#" }
+  // [1. ADVERTISING & SYSTEM CONFIGURATION]
+  const BloggerConfig = {
+    ads: {
+      ad1: { active: true, img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEh1DCqRRPeoaLbargUYRZMNPprZsKrKHoXnLrC6lP0scjqhC4MSdbW9BBaWD9of4IbzyIB6vggED7wgbXEgzjUFqFj1pD_SKB2maTAowyXjhbBHqc7wQ8gH5BnwhUUnRs-a6NQ5CkisKyRm44jjmb7aWVemwPPE2MGBVeJjbgJuTwV_T0IX2-Y5QCOqws/s320/ChatGPT%20Image%20Mar%2021,%202026,%2005_46_33%20PM.png", link: "https://chat.whatsapp.com/ICzDnFo41dCHjbR6qGkrPG" },
+      ad2: { active: false, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
+      readAlso: { active: true }, 
+      ad3: { active: false, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
+      ad4: { active: true, img: "https://sudheer.xyz/img/logo-sk.webp", link: "https://sudheer.xyz" },
+      ad5: { active: true, img: "https://blogger.googleusercontent.com/img/a/AVvXsEhXSPhB1eth9rPp7UhPVhYqpMEgKN33dtPm0g-wGlmFJb5HiXqdbcqmFgNoqurIpdA1EpoHlhKPJZwYzQC5m5HRM0H74aH6yhyoRXnBCD6l1sCxlgFXo5SvMnpCq-DTsFGfN4kOd9Pq9V0usBCkxGAhqyddsV2zn5bo4ajkuqRkJYvFj6O08bEtphKuhNs", link: "https://artofmentalism.in" },
+      ad6: { active: false, img: "https://via.placeholder.com/728x90?text=AD+SLOT+6", link: "#" }
+    },
+    // പരസ്യങ്ങൾ ഏത് പാരഗ്രാഫിന് (p index) താഴെ വരണമെന്ന് ഇവിടെ ക്രമീകരിക്കാം
+    injections: [
+      { key: 'ad1', type: 'ad', pIndex: 0 },
+      { key: 'ad2', type: 'ad', pIndex: 1 },
+      { key: 'readAlso', type: 'related', pIndex: 2 },
+      { key: 'ad3', type: 'ad', pIndex: 3 },
+      { key: 'ad4', type: 'ad', pIndex: 4 },
+      { key: 'ad5', type: 'ad', pIndex: 5 },
+      { key: 'ad6', type: 'ad', pIndex: 6 }
+    ]
   };
 
   // [2. MOBILE MENU & SEARCH]
   function toggleMobileMenu() { 
-    document.getElementById('mobileMenu').classList.toggle('active'); 
+    const menu = document.getElementById('mobileMenu');
+    if (menu) menu.classList.toggle('active'); 
   }
   function handleSearch() {
     const input = document.getElementById('searchInput');
-    if (input.value.trim() === "") input.focus();
-    else document.getElementById('searchForm').submit();
+    const form = document.getElementById('searchForm');
+    if (input && input.value.trim() === "") {
+      input.focus();
+    } else if (form) {
+      form.submit();
+    }
   }
 
   // [3. DATE & DARK MODE PERSISTENCE]
@@ -1360,52 +1377,52 @@
 
   // [4. FEED FETCHING (TICKER, TRENDING, READ ALSO)]
   let newsFeedData = [];
-  fetch('/feeds/posts/default?alt=json&max-results=15').then(r => r.json()).then(data => {
-    const entries = data.feed.entry;
-    newsFeedData = entries;
-    let tH = '', sH = '';
+  fetch('/feeds/posts/default?alt=json&max-results=15')
+    .then(r => r.json())
+    .then(data => {
+      const entries = data.feed?.entry;
+      newsFeedData = entries || [];
+      let tH = '', sH = '';
 
-    if(entries) {
-      entries.forEach((e, i) => {
-        let title = e.title.$t, link = e.link.find(x => x.rel === 'alternate').href;
-        let published = new Date(e.published.$t).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-        
-        let img = 'https://via.placeholder.com/400x250?text=Anti-Fraud';
-        if(e.media$thumbnail) img = e.media$thumbnail.url.replace('s72-c', 's600-c');
-        else if(e.content && e.content.$t.includes('<img')) {
-            let m = e.content.$t.match(/src="([^"]+)"/);
-            if(m) img = m[1];
-        }
-        
-        // Populate Ticker
-        tH += `<div class="ticker-item"><img src="${img}"/><a href="${link}">${title}</a></div>`;
-        
-        // Populate Trending Sidebar (8 items)
-        if(i < 8) {
-          sH += `<a href="${link}" class="trend-item">
-                    <img src="${img}" alt="${title}"/>
-                    <div class="trend-info">
-                      <h4>${title}</h4>
-                      <span class="trend-date">📅 ${published}</span>
-                    </div>
-                 </a>`;
-        }
-      });
+      if(entries) {
+        entries.forEach((e, i) => {
+          let title = e.title.$t, link = e.link.find(x => x.rel === 'alternate').href;
+          let published = new Date(e.published.$t).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+          
+          let img = 'https://via.placeholder.com/400x250?text=Anti-Fraud';
+          if(e.media$thumbnail) img = e.media$thumbnail.url.replace('s72-c', 's600-c');
+          else if(e.content && e.content.$t.includes('<img')) {
+              let m = e.content.$t.match(/src="([^"]+)"/);
+              if(m) img = m[1];
+          }
+          
+          tH += `<div class="ticker-item"><img src="${img}"/><a href="${link}">${title}</a></div>`;
+          
+          if(i < 8) {
+            sH += `<a href="${link}" class="trend-item">
+                      <img src="${img}" alt="${title}"/>
+                      <div class="trend-info">
+                        <h4>${title}</h4>
+                        <span class="trend-date">📅 ${published}</span>
+                      </div>
+                   </a>`;
+          }
+        });
 
-      if(document.getElementById('ticker-content')) document.getElementById('ticker-content').innerHTML = tH;
-      if(document.getElementById('trending-sidebar')) document.getElementById('trending-sidebar').innerHTML = sH;
-      
-      // Inject ads and related posts after fetching feed
-      injectPostAddons(); 
-    }
-  });
+        if(document.getElementById('ticker-content')) document.getElementById('ticker-content').innerHTML = tH;
+        if(document.getElementById('trending-sidebar')) document.getElementById('trending-sidebar').innerHTML = sH;
+        
+        injectPostAddons(); 
+      }
+    }).catch(err => console.error("Feed error: ", err));
 
   // [5. POST CONTENT ENHANCEMENT LOGIC]
   function injectPostAddons() {
     const body = document.getElementById('mainPostContent');
     if (!body) return;
 
-let firstEl = body.firstElementChild;
+    // ശൂന്യമായ പാരഗ്രാഫുകൾ നീക്കം ചെയ്യാനുള്ള ലോജിക്
+    let firstEl = body.firstElementChild;
     while (firstEl && firstEl.tagName === 'P') {
       const text = firstEl.innerHTML.replace(/&nbsp;/g, '').replace(/<br\s*\/?>/g, '').trim();
       if (text === '') {
@@ -1415,31 +1432,24 @@ let firstEl = body.firstElementChild;
       } else {
         break;
       }
-    }11 full
+    }
 
-    // --- ഇമേജ് ക്വാളിറ്റി & വിഡ്ത്ത് ഫിക്സർ ---
+    // ഇമേജ് ഒപ്റ്റിമൈസേഷൻ
     const bloggerImages = body.querySelectorAll('.separator img');
     bloggerImages.forEach(img => {
-      // 1. പഴയ സൈസ് ആട്രിബ്യൂട്ടുകൾ കളയുന്നു
       img.removeAttribute('width');
       img.removeAttribute('height');
-      
-      // 2. CSS വഴി 100% വിഡ്ത്ത് സെറ്റ് ചെയ്യുന്നു
       img.style.width = '100%';
       img.style.height = 'auto';
       img.style.borderRadius = '10px';
       img.style.display = 'block';
 
-      // 3. ക്വാളിറ്റി മാറ്റാൻ URL-ലെ സൈസ് പാരാമീറ്റർ മാറ്റി =s1200 ചേർക്കുന്നു
       let src = img.getAttribute('src');
       if (src && src.includes('blogger.googleusercontent.com')) {
-         // ലിങ്കിന്റെ മെയിൻ ഭാഗം മാത്രം എടുക്കുന്നു
          let baseUrl = src.split('=')[0];
-         // ഹൈ ക്വാളിറ്റി സൈസ് ചേർക്കുന്നു
          img.setAttribute('src', baseUrl + '=s1200');
       }
       
-      // 4. ഇമേജിനെ പൊതിഞ്ഞ A ടാഗിന്റെ സ്റ്റൈൽ മാറ്റുന്നു
       let parentA = img.closest('a');
       if (parentA) {
           parentA.style.marginLeft = '0';
@@ -1448,72 +1458,97 @@ let firstEl = body.firstElementChild;
       }
     });
     
-    // പാരഗ്രാഫുകൾ തിരഞ്ഞെടുക്കുന്നു
-    const elements = body.querySelectorAll('p'); 
+    // പാരഗ്രാഫുകൾ കണ്ടെത്തുന്നു
+    const elements = Array.from(body.querySelectorAll('p')).filter(p => p.textContent.trim().length > 0);
     const createAd = (data) => `<div class="in-post-ad"><a href="${data.link}" target="_blank"><img src="${data.img}"/></a></div>`;
     
-    // ഹെൽപ്പർ ഫങ്ഷൻ
     const insertAfter = (referenceNode, newNode) => {
-      if (referenceNode) {
+      if (referenceNode && referenceNode.parentNode) {
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
       }
     };
 
-    // 1. Ad1 - ഒന്നാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad1.active && elements[0]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad1);
-      insertAfter(elements[0], d);
-    }
+    // 🧠 സ്മാർട്ട് ഡൈനാമിക് അലോക്കേഷൻ സിസ്റ്റം (Smart Dynamic Allocation)
+    const usedIndices = new Set();
+    const fallbackQueue = [];
 
-    // 2. Ad2 - രണ്ടാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad2.active && elements[1]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad2);
-      insertAfter(elements[1], d);
-    }
+    BloggerConfig.injections.forEach(inj => {
+      let isActive = false;
+      if (inj.type === 'ad') {
+        isActive = BloggerConfig.ads[inj.key] && BloggerConfig.ads[inj.key].active;
+      } else if (inj.type === 'related') {
+        isActive = BloggerConfig.ads.readAlso && BloggerConfig.ads.readAlso.active;
+      }
 
-    // 3. Read Also - മൂന്നാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.readAlso.active && elements[2] && newsFeedData.length > 0) {
-      const rel = newsFeedData[Math.floor(Math.random() * newsFeedData.length)];
-      const relLink = rel.link.find(l => l.rel === 'alternate').href;
-      let relImg = 'https://via.placeholder.com/110x75?text=No+Image';
-      if (rel.media$thumbnail) relImg = rel.media$thumbnail.url.replace(/\/s[0-9]+(-c)?\//, '/s200-c/').replace(/=s[0-9]+(-c)?/, '=s200-c');
+      if (isActive) {
+        if (inj.pIndex < elements.length) {
+          // പാരഗ്രാഫ് ലഭ്യമാണെങ്കിൽ അവിടെ തന്നെ വെക്കുന്നു
+          const targetElement = elements[inj.pIndex];
+          const wrapper = document.createElement('div');
+          
+          if (inj.type === 'ad') {
+            wrapper.innerHTML = createAd(BloggerConfig.ads[inj.key]);
+          } else if (inj.type === 'related' && newsFeedData.length > 0) {
+            const rel = newsFeedData[Math.floor(Math.random() * newsFeedData.length)];
+            const relLink = rel.link.find(l => l.rel === 'alternate').href;
+            let relImg = 'https://via.placeholder.com/110x75?text=No+Image';
+            if (rel.media$thumbnail) {
+              relImg = rel.media$thumbnail.url.replace(/\/s[0-9]+(-c)?\//, '/s200-c/').replace(/=s[0-9]+(-c)?/, '=s200-c');
+            }
+            wrapper.innerHTML = `<div class="in-post-related"><img src="${relImg}" style="width:110px; height:75px; object-fit:cover; border-radius:8px;"/><div style="flex:1;"><small style="color:var(--accent);font-weight:900;display:block;margin-bottom:3px;">READ ALSO</small><a href="${relLink}" style="font-weight:bold; text-decoration:none; font-size:14px; line-height:1.4; display:block;">${rel.title.$t}</a></div></div>`;
+          }
+          insertAfter(targetElement, wrapper);
+          usedIndices.add(inj.pIndex);
+        } else {
+          // പാരഗ്രാഫ് ലഭ്യമല്ലെങ്കിൽ പിന്നീട് വെക്കാനായി ക്യൂവിലേക്ക് മാറ്റുന്നു
+          fallbackQueue.push(inj);
+        }
+      }
+    });
 
-      const d = document.createElement('div');
-      d.innerHTML = `<div class="in-post-related"><img src="${relImg}" style="width:110px; height:75px; object-fit:cover; border-radius:8px;"/><div style="flex:1;"><small style="color:var(--accent);font-weight:900;display:block;margin-bottom:3px;">READ ALSO</small><a href="${relLink}" style="font-weight:bold; text-decoration:none; font-size:14px; line-height:1.4; display:block;">${rel.title.$t}</a></div></div>`;
-      insertAfter(elements[2], d);
-    }
+    // പാരഗ്രാഫുകൾ കുറവായതിനാൽ വരാതിരുന്ന പരസ്യങ്ങളെ ബാക്കിയുള്ള ശൂന്യമായ പാരഗ്രാഫുകളിൽ വെക്കുന്നു
+    if (fallbackQueue.length > 0) {
+      for (let i = 0; i < elements.length; i++) {
+        if (!usedIndices.has(i)) {
+          const inj = fallbackQueue.shift();
+          if (!inj) break;
 
-    // 4. Ad3 - നാലാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad3.active && elements[3]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad3);
-      insertAfter(elements[3], d);
-    }
+          const targetElement = elements[i];
+          const wrapper = document.createElement('div');
 
-    // 5. Ad4 - അഞ്ചാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad4.active && elements[4]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad4);
-      insertAfter(elements[4], d);
-    }
-
-    // 6. Ad5 - ആറാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad5.active && elements[5]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad5);
-      insertAfter(elements[5], d);
-    }
-    
-    // 7. Ad6 - ഏഴാമത്തെ പാരഗ്രാഫിന് ശേഷം
-    if (adsData.ad6.active && elements[6]) {
-      const d = document.createElement('div'); d.innerHTML = createAd(adsData.ad6);
-      insertAfter(elements[6], d);
+          if (inj.type === 'ad') {
+            wrapper.innerHTML = createAd(BloggerConfig.ads[inj.key]);
+          } else if (inj.type === 'related' && newsFeedData.length > 0) {
+            const rel = newsFeedData[Math.floor(Math.random() * newsFeedData.length)];
+            const relLink = rel.link.find(l => l.rel === 'alternate').href;
+            let relImg = 'https://via.placeholder.com/110x75?text=No+Image';
+            if (rel.media$thumbnail) {
+              relImg = rel.media$thumbnail.url.replace(/\/s[0-9]+(-c)?\//, '/s200-c/').replace(/=s[0-9]+(-c)?/, '=s200-c');
+            }
+            wrapper.innerHTML = `<div class="in-post-related"><img src="${relImg}" style="width:110px; height:75px; object-fit:cover; border-radius:8px;"/><div style="flex:1;"><small style="color:var(--accent);font-weight:900;display:block;margin-bottom:3px;">READ ALSO</small><a href="${relLink}" style="font-weight:bold; text-decoration:none; font-size:14px; line-height:1.4; display:block;">${rel.title.$t}</a></div></div>`;
+          }
+          insertAfter(targetElement, wrapper);
+          usedIndices.add(i);
+        }
+      }
     }
   }
 
   // [6. SOCIAL SHARING & CLIPBOARD]
   function shareWa() { window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(document.title + "\n" + window.location.href), "_blank"); }
   function shareTg() { window.open("https://t.me/share/url?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent(document.title), "_blank"); }
+  
   function copyNow(u) {
-    const t = document.createElement('textarea'); t.value = u; document.body.appendChild(t);
-    t.select(); document.execCommand('copy'); document.body.removeChild(t);
+    const t = document.createElement('textarea'); 
+    t.value = u; 
+    document.body.appendChild(t);
+    t.select(); 
+    try {
+      document.execCommand('copy');
+    } catch(err) {
+      console.error('Copy failed', err);
+    }
+    document.body.removeChild(t);
     const toast = document.getElementById('toast'); 
     if(toast) {
         toast.className = 'show';
@@ -1523,17 +1558,17 @@ let firstEl = body.firstElementChild;
 
 //]]>
 </script>
-  <script>
+
+<script>
 //<![CDATA[
-// 1. കോപ്പി ചെയ്യാനുള്ള ഫങ്ക്ഷൻ
-function copyContent() {
+// 1. കോപ്പി ചെയ്യാനുള്ള ഫങ്ക്ഷൻ (കൂടുതൽ സുരക്ഷിതമായ രീതിയിൽ)
+function copyContent(event) {
     const chapterArea = document.getElementById('chapter-content');
     if (!chapterArea) {
-        alert("cant find copying contentല!");
+        alert("cant find copying content!");
         return;
     }
 
-    // കണ്ടന്റ് സെലക്ട് ചെയ്ത് കോപ്പി ചെയ്യുന്നു
     const range = document.createRange();
     range.selectNode(chapterArea);
     window.getSelection().removeAllRanges();
@@ -1541,16 +1576,17 @@ function copyContent() {
 
     try {
         document.execCommand('copy');
-        // ബട്ടണിലെ ടെക്സ്റ്റ് താൽക്കാലികമായി മാറ്റുന്നു (ഒരു ഫീഡ്ബാക്കിന് വേണ്ടി)
-        const copyBtn = event.target;
-        const originalText = copyBtn.innerHTML;
-        copyBtn.innerHTML = "✅ Copied to Clipboard!";
-        copyBtn.style.background = "#28a745"; // പച്ച നിറം
-        
-        setTimeout(function() {
-            copyBtn.innerHTML = originalText;
-            copyBtn.style.background = ""; // പഴയ നിറത്തിലേക്ക് മാറ്റുന്നു
-        }, 2000);
+        const copyBtn = event ? event.target : null;
+        if (copyBtn) {
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = "✅ Copied to Clipboard!";
+            copyBtn.style.background = "#28a745"; 
+            
+            setTimeout(function() {
+                copyBtn.innerHTML = originalText;
+                copyBtn.style.background = ""; 
+            }, 2000);
+        }
     } catch (err) {
         alert("Sorry, Text Cant be Copied.");
     }
@@ -1569,9 +1605,9 @@ function copyContent() {
     const year = urlParts[3], month = urlParts[4], fileName = urlParts[5];
 
     const seriesConfig = {
-        'mind-is-a-magician': 20,
-        'the-project-house': 2,
-        'novel-horror': 5
+      'mind-is-a-magician': 20,
+      'the-project-house': 2,
+      'novel-horror': 5
     };
 
     let currentSeries = Object.keys(seriesConfig).find(s => fileName.includes(s));
@@ -1611,14 +1647,16 @@ function copyContent() {
 
     chapterDiv.insertAdjacentHTML('afterend', navHtml);
 })();
-// Mobileenu opener
+
+// Mobile menu opener
 function toggleSubMenu(element) {
-  if (window.innerWidth <= 1100) {
+  if (window.innerWidth <= 1100 && element) {
     var content = element.nextElementSibling;
-    content.classList.toggle('active');
+    if (content) content.classList.toggle('active');
   }
 }
 //]]>
 </script>
+
   </body>
 </html>
