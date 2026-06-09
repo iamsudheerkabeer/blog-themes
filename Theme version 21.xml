@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsversion='3' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
+<!-- ============================================================ -->
+  <!-- Developed And Designed By -->
+	<!-- 🧑🏻‍💻 Sudheer Kabeer-->
+    <!-- 📱 9020645214 -->
+    <!-- 🌐 https://sudheer.xyz -->
+	<!--  https://github.com/iamsudheerkabeer/blog-themes/ -->
+    <!-- 🔃 V. 23 -->
+    
+  <!-- ============================================================ -->
   <!-- [ SECTION 1: CORE META TAGS ] -->
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'/>
   <meta charset='utf-8'/>
@@ -94,10 +103,12 @@
   </title>
 
   <!-- ============================================================ -->
-  <!-- &#9989; SITE CONFIG &#8212; auto update -->
-    <!-- &#9989; Sudheer Kabeer-->
-    <!-- &#9989; 9020645214 -->
-    <!-- &#9989; https://sudheer.xyz -->
+  <!-- Developed And Designed By -->
+	<!-- 🧑🏻‍💻 Sudheer Kabeer-->
+    <!-- 📱 9020645214 -->
+    <!-- 🌐 https://sudheer.xyz -->
+	<!--  https://github.com/iamsudheerkabeer/blog-themes/ -->
+    <!-- 🔃 V. 23 -->
     
   <!-- ============================================================ -->
   <script type='text/javascript'>
@@ -113,6 +124,7 @@
       logoUrl:    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyWimc82oqJztatEY0-Y7JNjxpCBPXX7CRH4C_jGty_C53gvW1-PGeIHS6P-QnuS1xXJYZh_6Pj_hxZBOgzIQSZNcR4PORynWGxk6QfrawLeLqvBDhpvRVgb1hkTX5hUbeZq0JGYRGegLvb98Kj9e2d-K_GTGjO9y7XUbqTAAL86UsbkD_UufTlZrgx4o/s1600/Logo-Vazhchayugam.com.png",
       adminPhoto: "https://blogger.googleusercontent.com/img/a/AVvXsEj2MqmUXTWDs1WrvCP3jA9ZPL5hBEqOQ34WklhVH6dJywr8R2MTUbKF58rV0ucb21OrxAhrY0Uedyr_J3oTCwTHhl79TqBKEETc5UvTiojRzBFki54pqVrTGJL6WjTSZ5V-DI-8AT7ai9V3Ws3br-eB4B3ZKbDuQ2W7TBOniWQDZcZ1pJVvAHoLi8sBa2g",
       blogId:     "1583601171616902226",
+	  postImageSize: 100,
     },
 
     // 🎨 THEME COLORS (dark mode)
@@ -1648,10 +1660,11 @@
       img.style.borderRadius = '10px';
       img.style.display = 'block';
 
-      let src = img.getAttribute('src');
       if (src && src.includes('blogger.googleusercontent.com')) {
          let baseUrl = src.split('=')[0];
-         img.setAttribute('src', baseUrl + '=s1200');
+         // Config- size Implementing
+         let imgSize = SiteConfig.site.postImageSize || 600; 
+         img.setAttribute('src', baseUrl + '=s' + imgSize);
       }
       
       let parentA = img.closest('a');
@@ -1857,10 +1870,12 @@ function toggleSubMenu(element) {
 //]]>
 </script>
 <!-- ============================================================ -->
-  <!-- &#9989; SITE CONFIG &#8212; auto update -->
-    <!-- &#9989; Sudheer Kabeer-->
-    <!-- &#9989; 9020645214 -->
-    <!-- &#9989; https://sudheer.xyz -->
+  <!-- Developed And Designed By -->
+	<!-- 🧑🏻‍💻 Sudheer Kabeer-->
+    <!-- 📱 9020645214 -->
+    <!-- 🌐 https://sudheer.xyz -->
+	<!--  https://github.com/iamsudheerkabeer/blog-themes/ -->
+    <!-- 🔃 V. 23 -->
     
   <!-- ============================================================ -->
   </body>
