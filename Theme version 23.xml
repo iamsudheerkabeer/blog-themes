@@ -120,6 +120,7 @@
       name:       "Vazhcha Yugam",
       tagline:    "Your Window to the World",
       topBarRight:"Vazhcha Yugam &amp; News On The Go",
+	  footerText: "News On The Go",
       author:     "Sudheer Kabeer",
       logoUrl:    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyWimc82oqJztatEY0-Y7JNjxpCBPXX7CRH4C_jGty_C53gvW1-PGeIHS6P-QnuS1xXJYZh_6Pj_hxZBOgzIQSZNcR4PORynWGxk6QfrawLeLqvBDhpvRVgb1hkTX5hUbeZq0JGYRGegLvb98Kj9e2d-K_GTGjO9y7XUbqTAAL86UsbkD_UufTlZrgx4o/s1600/Logo-Vazhchayugam.com.png",
       adminPhoto: "https://blogger.googleusercontent.com/img/a/AVvXsEj2MqmUXTWDs1WrvCP3jA9ZPL5hBEqOQ34WklhVH6dJywr8R2MTUbKF58rV0ucb21OrxAhrY0Uedyr_J3oTCwTHhl79TqBKEETc5UvTiojRzBFki54pqVrTGJL6WjTSZ5V-DI-8AT7ai9V3Ws3br-eB4B3ZKbDuQ2W7TBOniWQDZcZ1pJVvAHoLi8sBa2g",
@@ -1480,7 +1481,7 @@
 
     // Footer Site Name
     const fsn = document.getElementById('footerSiteName');
-    if (fsn) fsn.textContent = S.site.name + ' | News On The Go';
+    if (fsn) fsn.textContent = S.site.name + ' | ' + S.site.footerText;
 
     // Footer Ads Link
     const fal = document.getElementById('footerAdsLink');
