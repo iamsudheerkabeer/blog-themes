@@ -1481,7 +1481,7 @@
 
     // Footer Site Name
     const fsn = document.getElementById('footerSiteName');
-    if (fsn) fsn.textContent = S.site.name + ' | ' + S.site.footerText;
+    if (fsn) fsn.textContent = S.site.name + '  ' + S.site.footerText;
 
     // Footer Ads Link
     const fal = document.getElementById('footerAdsLink');
