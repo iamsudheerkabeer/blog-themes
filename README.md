@@ -1,4 +1,5 @@
 # Premium Blogger Theme 🚀
+Update to Version 23
 
 A highly optimized, feature-rich, and dynamic Blogger template designed for modern news portals, content creators, and serial novel publishers. Developed with clean code architecture and advanced JavaScript logic.
 
@@ -14,7 +15,7 @@ A highly optimized, feature-rich, and dynamic Blogger template designed for mode
 
 ## 📂 Repository Structure
 
-- `main-theme.xml` & `Theme version 21.xml` - Complete Blogger XML theme files.
+- `main-theme.xml` & `Theme version 23.xml` - Complete Blogger XML theme files.
 - `configdata.js` - The plain-text configuration object for easy customization.
 - `main original.js` - The core logic for ads, feeds, and UI rendering (Open for learning/editing).
 - `copy etc.js` - Dedicated script for advanced chapter navigation and copy functionalities.
