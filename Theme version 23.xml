@@ -124,7 +124,7 @@
       logoUrl:    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyWimc82oqJztatEY0-Y7JNjxpCBPXX7CRH4C_jGty_C53gvW1-PGeIHS6P-QnuS1xXJYZh_6Pj_hxZBOgzIQSZNcR4PORynWGxk6QfrawLeLqvBDhpvRVgb1hkTX5hUbeZq0JGYRGegLvb98Kj9e2d-K_GTGjO9y7XUbqTAAL86UsbkD_UufTlZrgx4o/s1600/Logo-Vazhchayugam.com.png",
       adminPhoto: "https://blogger.googleusercontent.com/img/a/AVvXsEj2MqmUXTWDs1WrvCP3jA9ZPL5hBEqOQ34WklhVH6dJywr8R2MTUbKF58rV0ucb21OrxAhrY0Uedyr_J3oTCwTHhl79TqBKEETc5UvTiojRzBFki54pqVrTGJL6WjTSZ5V-DI-8AT7ai9V3Ws3br-eB4B3ZKbDuQ2W7TBOniWQDZcZ1pJVvAHoLi8sBa2g",
       blogId:     "1583601171616902226",
-	  postImageSize: 100,
+	  postImageSize: 600,
     },
 
     // 🎨 THEME COLORS (dark mode)
